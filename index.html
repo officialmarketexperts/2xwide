@@ -3,105 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MOHIT AGARWAL | Premium Market Education</title>
+<title>PANKAJ BHARDWAJ OFFICIAL </title>
 
-<!-- GOOGLE FONTS -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<!-- FONT AWESOME -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
 body{
     min-height:100vh;
-    background:radial-gradient(circle at top,#1e1b4b,#020617 70%);
+    background:linear-gradient(180deg,#eef2ff,#f8f9ff);
     display:flex;
     align-items:center;
     justify-content:center;
-    font-family:'Poppins',sans-serif;
-    color:#fff;
 }
 
 .card{
     width:92%;
-    max-width:440px;
-    padding:42px 28px 36px;
-    border-radius:32px;
-    background:linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.03));
-    backdrop-filter:blur(18px);
-    border:1px solid rgba(255,255,255,0.18);
-    box-shadow:0 35px 90px rgba(0,0,0,0.65);
+    max-width:420px;
+    background:#fff;
+    border-radius:28px;
+    padding:35px 25px 30px;
     text-align:center;
+    box-shadow:0 20px 50px rgba(0,0,0,0.12);
 }
 
+/* ================= LOGO GLOW ================= */
 .logo-wrap{
-    width:130px;
-    height:130px;
-    margin:0 auto 20px;
+    width:120px;
+    height:120px;
+    margin:0 auto 18px;
     border-radius:50%;
     background:#fff;
     display:flex;
     align-items:center;
     justify-content:center;
+    animation:logoGlow 3s infinite alternate;
+}
+
+@keyframes logoGlow{
+    0%{ box-shadow:0 0 12px rgba(79,70,229,0.4); }
+    100%{ box-shadow:0 0 40px rgba(79,70,229,0.95); }
 }
 
 .logo-wrap img{
     width:85%;
-    border-radius:50%;
 }
 
-.title{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:14px;
-    margin-bottom:10px;
-}
-
-.title i{color:#facc15;font-size:26px;}
-.title h1{
-    font-family:'Playfair Display',serif;
-    font-size:28px;
+/* ================= TITLE ================= */
+h1{
+    font-size:26px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:8px;
 }
 
 .sub{
     font-size:14px;
-    color:#d4d4d8;
-    margin-bottom:28px;
+    color:#777;
+    margin-bottom:22px;
 }
 
-.features{text-align:left;margin-bottom:32px;}
+/* ================= FEATURES ================= */
+.features{
+    text-align:left;
+    margin-bottom:30px;
+}
+
 .feature{
     display:flex;
-    gap:14px;
+    align-items:center;
+    gap:12px;
     font-size:15px;
-    margin-bottom:16px;
+    margin-bottom:14px;
+    color:#333;
 }
-.feature i{color:#facc15;}
 
+/* ================= TELEGRAM BUTTON ================= */
 .telegram-btn{
     width:100%;
-    padding:17px;
-    border-radius:18px;
+    padding:16px;
     font-size:16px;
     font-weight:600;
-    background:linear-gradient(135deg,#facc15,#fde047);
-    color:#020617;
+    color:#fff;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    cursor:pointer;
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:12px;
-    text-decoration:none;
+    gap:10px;
+
+    animation:heartbeat 1.5s infinite,
+              btnGlow 2.5s infinite alternate;
 }
 
-.stars{margin:22px 0 6px;color:#facc15;}
-.rating{font-size:13px;color:#d4d4d8;margin-bottom:20px;}
-.disclaimer{font-size:11.5px;color:#a1a1aa;}
-</style>
+/* HEART BEAT */
+@keyframes heartbeat{
+    0%{transform:scale(1);}
+    25%{transform:scale(1.05);}
+    50%{transform:scale(1);}
+    75%{transform:scale(1.08);}
+    100%{transform:scale(1);}
+}
 
-<!-- ✅ META PIXEL CODE -->
+/* BUTTON GLOW */
+@keyframes btnGlow{
+    0%{
+        box-shadow:0 0 10px rgba(79,70,229,0.5);
+    }
+    100%{
+        box-shadow:0 0 35px rgba(79,70,229,1);
+    }
+}
+
+/* ================= TELEGRAM ICON ================= */
+.telegram-icon{
+    font-size:22px;
+    animation:bounce 1.2s infinite,
+              iconGlow 2s infinite alternate;
+}
+
+/* ICON BOUNCE */
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-6px);}
+}
+
+/* ICON GLOW */
+@keyframes iconGlow{
+    0%{text-shadow:0 0 6px rgba(255,255,255,0.6);}
+    100%{text-shadow:0 0 16px rgba(255,255,255,1);}
+}
+
+/* ================= STARS ================= */
+.stars{
+    margin:22px 0 10px;
+    font-size:22px;
+    color:#facc15;
+}
+
+.rating{
+    font-size:13px;
+    color:#666;
+    margin-bottom:18px;
+}
+
+/* ================= DISCLAIMER ================= */
+.disclaimer{
+    font-size:11.5px;
+    color:#9a9a9a;
+    line-height:1.6;
+}
+</style>
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -111,52 +172,45 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1289497666276158');
+fbq('init', '2086155282203727');
 fbq('track', 'PageView');
 </script>
-
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1289497666276158&ev=PageView&noscript=1"/>
-</noscript>
-<!-- ✅ META PIXEL END -->
-
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2086155282203727&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 
 <body>
 
 <div class="card">
 
+    <!-- LOGO -->
     <div class="logo-wrap">
-        <img src="https://uploads.onecompiler.io/446vwj75z/448qqnmcq/WhatsApp%20Image%202025-12-26%20at%2018.36.44.jpeg" alt="Logo">
+        <img src="logo.png" alt="PANKAJ BHARDWAJ">
     </div>
 
-    <div class="title">
-        <i class="fa-solid fa-crown"></i>
-        <h1>TRADE WITH MOHIT AGARWAL</h1>
-        <i class="fa-solid fa-crown"></i>
-    </div>
-
-    <div class="sub">20,000+ Learners • Premium Education Community</div>
+    <h1>👑PANKAJ BHARDWAJ👑</h1>
+    <div class="sub">1 LAKH+ learners • Trusted community</div>
 
     <div class="features">
-        <div class="feature"><i class="fa-solid fa-chart-line"></i>Market Education & Chart Mastery</div>
-        <div class="feature"><i class="fa-solid fa-coins"></i>Nifty • BankNifty • Stock Analysis</div>
-        <div class="feature"><i class="fa-solid fa-shield-halved"></i>Risk Management & Discipline</div>
-        <div class="feature"><i class="fa-solid fa-gem"></i>No Hype • Only Skill & Clarity</div>
+        <div class="feature">📊 Market Education & Chart Reading</div>
+        <div class="feature">📈 Nifty • BankNifty • Stock Analysis</div>
+        <div class="feature">🛡️ Risk Management & Discipline</div>
+        <div class="feature">🎯 Learn with clarity, not false promises</div>
     </div>
 
-    <!-- ✅ TELEGRAM LINK -->
-    <a href="https://t.me/+zrnr97SHlsAyYjZl" target="_blank" class="telegram-btn">
-        <i class="fa-brands fa-telegram"></i>
+    <!-- TELEGRAM BUTTON -->
+    <button class="telegram-btn" onclick="window.location.href='https://t.me/+zrnr97SHlsAyYjZl'">
+        <span class="telegram-icon">✈️</span>
         JOIN TELEGRAM CHANNEL
-    </a>
+    </button>
 
     <div class="stars">★★★★★</div>
-    <div class="rating">Rated 5.0 by our learning community</div>
+    <div class="rating">Rated highly by community learners</div>
 
     <div class="disclaimer">
-        Educational purpose only. No tips or guarantees.<br>
+        Educational purpose only. No tips, no guarantees.<br>
         Market participation involves risk.
     </div>
 
